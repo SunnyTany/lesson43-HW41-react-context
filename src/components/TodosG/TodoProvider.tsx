@@ -33,6 +33,8 @@ const TodoProvider = ({children}: TodoProviderPropsInterface) => {
     setTodos(todos.filter((todo: TodoItemInterface) => !todo.completed))
   }
 
+  const completedTodosCount: number = todos.filter((todo: TodoItemInterface) => todo.completed).length
+
   return (
     <TodoContext.Provider value={{
       todos,
@@ -43,6 +45,7 @@ const TodoProvider = ({children}: TodoProviderPropsInterface) => {
       clearCompletedTodos,
     }}>
       {children}
+      { completedTodosCount > 0 && <p>You have completed {completedTodosCount} {completedTodosCount > 1 ?  "todos" : "todo"}</p> }
     </TodoContext.Provider>
   )
 }
