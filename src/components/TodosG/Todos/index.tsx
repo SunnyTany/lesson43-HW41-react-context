@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { TodoContext } from "../TodoProvider"
 import { TodoItemInterface } from "../../../types/TodoItem.interface"
-import Todo from '../Todo/Todo'
+import Todo from '../Todo'
 import styles from './Todos.module.css'
 
 const Todos = () => {

@@ -1,7 +1,7 @@
 import { useContext, useState, FormEvent, ChangeEvent } from "react"
 import { TodoContext } from "../TodosG/TodoProvider"
 import { v4 as uuidv4 } from 'uuid'
-import Button from '../Button/Button'
+import Button from '../Button'
 import styles from './Form.module.css'
 
 const Form = () => {

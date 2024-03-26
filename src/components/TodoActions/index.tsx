@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { RiCheckboxCircleLine, RiDeleteBin5Fill } from "react-icons/ri"
 import { TodoContext } from "../TodosG/TodoProvider"
 import { TodoItemInterface } from "../../types/TodoItem.interface"
-import Button from "../Button/Button"
+import Button from "../Button"
 import styles from './TodoActions.module.css'
 
 const Actions = () => {

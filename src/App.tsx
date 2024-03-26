@@ -1,8 +1,8 @@
 import TodoProvider from './components/TodosG/TodoProvider'
-import Title from './components/Title/Title'
-import Form from './components/Form/Form'
-import TodoActions from './components/TodoActions/TodoActions'
-import Todos from './components/TodosG/Todos/Todos'
+import Title from './components/Title'
+import Form from './components/Form'
+import TodoActions from './components/TodoActions'
+import Todos from './components/TodosG/Todos'
 import './App.css'
 
 const App = () => {
