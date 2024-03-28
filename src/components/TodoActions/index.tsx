@@ -5,30 +5,35 @@ import { TodoItemInterface } from "../../types/TodoItem.interface"
 import Button from "../Button"
 import styles from './TodoActions.module.css'
 
-const Actions = () => {
+const TodoActions = () => {
   const { todos, deleteAllTodos, clearCompletedTodos } = useContext(TodoContext)
   const completedTodosExist: boolean = todos.some((todo: TodoItemInterface) => todo.completed)
 
   return ( 
-    <div className={styles.actionsWrap} >
-      <Button 
-        className={styles.actionBtn} 
-        onClick={() => deleteAllTodos()} 
-        title="Delete all Todos"
-        disabled={todos.length <= 0}
-      >
-        <RiDeleteBin5Fill />
-      </Button>
-      <Button 
-        className={styles.actionBtn} 
-        onClick={() => clearCompletedTodos()} 
-        title="Clear completed Todos" 
-        disabled={!completedTodosExist}
-      >
-        <RiCheckboxCircleLine/>
-      </Button>
-    </div>
+    <>
+      {
+        todos.length > 0 && 
+        <div className={styles.actionsWrap} >
+          <Button 
+            className={styles.actionBtn} 
+            onClick={() => deleteAllTodos()} 
+            title="Delete all Todos"
+            disabled={todos.length <= 0}
+          >
+            <RiDeleteBin5Fill />
+          </Button>
+          <Button 
+            className={styles.actionBtn} 
+            onClick={() => clearCompletedTodos()} 
+            title="Clear completed Todos" 
+            disabled={!completedTodosExist}
+          >
+            <RiCheckboxCircleLine/>
+          </Button>
+        </div>
+      }
+    </>
   )
 }
 
-export default Actions
+export default TodoActions

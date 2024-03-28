@@ -6,8 +6,9 @@ import Todos from './components/TodosG/Todos'
 import './App.css'
 
 const App = () => {
+  
   return (
-  <div className="container">
+    <div className="container">
       <TodoProvider>
         <Title />
         <Form />
